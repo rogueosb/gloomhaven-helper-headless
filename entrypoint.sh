@@ -10,9 +10,13 @@ fi
 
 echo "Setting up config."
 
-if [[ ! -f ~/.ghh/config ]]; then
-    echo "No existing config. Setting up basic one."
+
+if [[ ! -d ~/.ghh ]]; then
+    echo "No existing config or folder. Setting up basic one."
     mkdir ~/.ghh && echo '{server:true,serverPort:58888}' > ~/.ghh/config
+elif [[ ! -f ~/.ghh/config ]]; then
+    echo "No existing config. Setting up basic one."
+    echo '{server:true,serverPort:58888}' > ~/.ghh/config
 else
     echo "Existing config. Making sure server is enabled."
     sed -i 's/server:false/server:true/' ~/.ghh/config
