@@ -1,7 +1,7 @@
 FROM openjdk:14-slim-buster
 
 RUN apt-get update
-RUN apt-get install --yes wget unzip xvfb liblwjgl-java tini jq
+RUN apt-get install --yes curl wget unzip xvfb liblwjgl-java tini jq
 
 COPY entrypoint.sh .
 
