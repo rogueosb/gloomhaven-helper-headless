@@ -8,6 +8,11 @@ if [[ "$debug" ]]; then
     set -x
 fi
 
+echo "Downloading latest version of Gloomhaven Helper."
+version=`curl -s 'https://itunes.apple.com/lookup?bundleId=com.badlogicgames.ghh' | jq -r '.results[0].version'`
+wget http://esotericsoftware.com/files/ghh/GloomhavenHelper-$version.zip
+unzip GloomhavenHelper-$version.zip
+
 echo "Setting up config."
 
 
