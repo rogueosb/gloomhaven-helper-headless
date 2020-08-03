@@ -1,5 +1,3 @@
-![CI](https://github.com/vincer/gloomhaven-helper-headless/workflows/CI/badge.svg)
-
 # Headless Gloomhaven Helper Server
 
 [Gloomhaven Helper][GHH] has a server/client mode that has been super-useful for my friends and me. The only hiccup is since one of us has to act as the server, the server IP can change depending on who is playing, where we are, etc. If we're playing remotely this can get particularly tricky as one of us has to set up port-forwarding in our router, find our external IP, etc.
@@ -10,7 +8,7 @@ But my server is headless (i.e. it has no monitor connected to it. I manage it v
 
 ## Installing and Running
 
-The image is [available](https://hub.docker.com/r/grepnull/gloomhaven-helper-headless) on Docker Hub.
+The image is [available](https://hub.docker.com/r/rogueosb/gloomhaven-helper-headless) on Docker Hub.
 
 ```
 docker run -p 58888:58888 --name ghh-headless -d ghh-headless
@@ -27,7 +25,7 @@ Starting Gloomhaven Helper
 
 ## Docker Compose
 
-In this repo there's also a Docker Compose configuration for ease of set up. Either clone the repo or just [download](https://raw.githubusercontent.com/vincer/gloomhaven-helper-headless/master/docker-compose.yml) the config and then follow the instructions in [Preserving State](#Preserving-State). Then run:
+In this repo there's also a Docker Compose configuration for ease of set up. Either clone the repo or just [download](https://raw.githubusercontent.com/rogueosb/gloomhaven-helper-headless/master/docker-compose.yml) the config and then follow the instructions in [Preserving State](#Preserving-State). Then run:
 
 ```
 docker-compose up -d
