@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   gloomhaven-helper-headless:
-    image: grepnull/gloomhaven-helper-headless:latest
+    image: rogueosb/gloomhaven-helper-headless:latest
     restart: always
     volumes:
       - ./ghh:/root/.ghh
