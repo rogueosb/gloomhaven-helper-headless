@@ -34,7 +34,7 @@ if [[ -z "$@" ]]; then
     if [[ "$debug" ]]; then
 	JAVA_OPTS="${JAVA_OPTS} -verbose"
     fi
-    exec xvfb-run java ${JAVA_OPTS} -jar GloomhavenHelper/ghh.jar
+    exec xvfb-run -a java ${JAVA_OPTS} -jar GloomhavenHelper/ghh.jar
 else
     echo "Running passed command: $@"
     exec "$@"
